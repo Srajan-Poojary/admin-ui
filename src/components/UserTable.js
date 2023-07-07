@@ -152,7 +152,12 @@ function UserTable() {
    */
 
   const updateCurrentListOfUsers = (data) => {
-    const pageIndex = calculatePageIndex(currentPage, userPerPage);
+    const pageIndex = calculatePageIndex(
+      currentPage,
+      userPerPage,
+      data,
+      searchText
+    );
     setCurrentListOfUsers(
       data.slice(pageIndex.indexOfFirstUser, pageIndex.indexOfLastUser)
     );

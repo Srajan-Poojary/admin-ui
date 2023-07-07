@@ -91,9 +91,30 @@ function getTotalPages(userList, userPerPage) {
  * @param {number} userPerPage - The number of users to display per page.
  * @returns {Object} Returns an object containing the index of the first and last user to display on the current page.
  */
-function calculatePageIndex(currentPage, userPerPage) {
-  const indexOfLastUser = currentPage * userPerPage;
-  const indexOfFirstUser = indexOfLastUser - userPerPage;
+function calculatePageIndex(currentPage, userPerPage, data, searchText) {
+  let indexOfFirstUser;
+  let indexOfLastUser;
+
+  // To handle case when user searches from page other than first page.
+  if (searchText.length !== 0) {
+    // if filtered data length is less that userPerPage
+    if (data.length <= userPerPage) {
+      indexOfLastUser = 1 * userPerPage;
+      indexOfFirstUser = indexOfLastUser - userPerPage;
+    } else {
+      indexOfLastUser = currentPage * userPerPage;
+      indexOfFirstUser = indexOfLastUser - userPerPage;
+
+      // if index goes out of bounds handling it here.
+      if (indexOfLastUser > data.length) {
+        indexOfLastUser = data.length;
+        indexOfFirstUser = indexOfLastUser - userPerPage;
+      }
+    }
+  } else {
+    indexOfLastUser = currentPage * userPerPage;
+    indexOfFirstUser = indexOfLastUser - userPerPage;
+  }
 
   return {
     indexOfFirstUser: indexOfFirstUser,
