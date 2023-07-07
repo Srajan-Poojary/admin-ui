@@ -1,0 +1,30 @@
+@import url("../common/colors.css");
+
+.root {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+.usertable-search-bar {
+  text-align: center;
+}
+
+.user-input {
+  width: 60%;
+  padding: 0.5rem;
+  border: 2px solid var(--secondary-color);
+  margin-top: 10px;
+}
+
+.user-input::placeholder {
+  color: var(--secondary-color);
+}
+
+@media (max-width: 1024px) {
+  .user-input {
+    width: 90%;
+  }
+}

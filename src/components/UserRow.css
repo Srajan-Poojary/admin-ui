@@ -1,0 +1,19 @@
+@import url("../common/colors.css");
+
+body {
+  box-sizing: border-box;
+}
+
+.edit-input-field {
+  padding: 0.4rem;
+}
+
+.update-btn {
+  padding: 0.8rem 1rem;
+  border-radius: 10px;
+  background-color: var(--primary-button-color);
+  color: white;
+  cursor: pointer;
+  box-shadow: none;
+  border: 1px;
+}

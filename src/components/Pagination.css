@@ -1,0 +1,124 @@
+@import url("../common/colors.css");
+
+nav {
+  display: flex;
+  justify-content: center;
+}
+
+.btn-container {
+  display: flex;
+  width: 60%;
+}
+
+.left-btn-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.left-btn-section {
+  display: flex;
+  gap: 1rem;
+}
+
+.right-btn-section {
+  width: 15%;
+}
+
+.delete-btn {
+  padding: 0.8rem 1rem;
+  border-radius: 10px;
+  background-color: var(--primary-button-color);
+  color: white;
+  cursor: pointer;
+  box-shadow: none;
+}
+
+.rounded-btn {
+  height: 2.1rem;
+  width: 2.1rem;
+  background-color: var(--secondary-button-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 50%;
+  border: 0.5px solid white;
+}
+
+.rounded-btn p {
+  color: white;
+}
+
+.rounded-btn-img {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+.pagination {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+.page-link {
+  text-decoration: none;
+  color: black;
+  font-size: 1.2rem;
+}
+
+.active-page {
+  background-color: white;
+  border: 0.5px solid var(--secondary-button-color);
+}
+
+.active-page p {
+  color: var(--secondary-button-color);
+}
+
+.inactive-page {
+  background-color: var(--secondary-button-color);
+  border: 0.5px solid white;
+}
+
+.inactive-page p {
+  color: white;
+}
+
+@media (max-width: 1024px) {
+  .delete-btn {
+    height: 50px;
+    width: 100%;
+    padding: 0;
+  }
+
+  .rounded-btn {
+    height: 1.8rem;
+    width: 1.8rem;
+  }
+
+  .page-number {
+    font-size: 1rem;
+  }
+
+  .left-btn-container {
+    align-items: center;
+    grid-row: 1/2;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+
+  .left-btn-section {
+    align-items: center;
+  }
+
+  .left-btn-section svg {
+    height: 1rem;
+    width: 1rem;
+  }
+  .right-btn-section {
+    width: 100% !important;
+  }
+}

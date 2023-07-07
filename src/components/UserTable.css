@@ -1,0 +1,92 @@
+@import url("../common/colors.css");
+
+body {
+  box-sizing: border-box;
+}
+
+.user-table {
+  display: flex;
+  justify-content: center;
+}
+
+.myTable {
+  width: 100%;
+  margin: 0 20%;
+  border-collapse: separate;
+  border-spacing: 0 2rem;
+}
+
+table td,
+table th {
+  font-size: 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--secondary-color);
+  padding-bottom: 1.2rem;
+}
+
+table td:first-child,
+table th:first-child {
+  width: 20%;
+}
+
+.action-button {
+  height: 1rem;
+  width: 1rem;
+  margin-left: 0.8rem;
+}
+
+.right-btn-section {
+  width: 15%;
+}
+
+.delete-btn {
+  padding: 0.8rem 1rem;
+  border-radius: 10px;
+  background-color: var(--primary-button-color);
+  color: white;
+  cursor: pointer;
+  box-shadow: none;
+  border: 1px;
+}
+
+.buttons-container {
+  display: flex;
+  margin: 0 20%;
+}
+
+@media (max-width: 1024px) {
+  .myTable {
+    margin: 0 0;
+    overflow-x: auto;
+    width: 1000px;
+    border-spacing: 0 1rem;
+  }
+
+  table.myTable td {
+    min-width: 200px;
+  }
+
+  table td,
+  table th {
+    font-size: 0.8rem;
+    padding-bottom: 0.8rem;
+  }
+
+  .buttons-container {
+    margin: 0 5%;
+    display: grid;
+    grid-template-rows: auto auto;
+    margin-top: 15px;
+  }
+
+  .user-table {
+    display: block;
+    margin: 0 5%;
+    min-width: 100vw;
+    overflow-x: scroll;
+  }
+
+  .delete-btn {
+    width: 100%;
+  }
+}
